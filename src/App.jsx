@@ -11,7 +11,7 @@ import ContactPage from './pages/ContactPage';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/ATLASCORE">
       <div className="bg-[#111111] text-white font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#EAB308] selection:text-black">
         <Navbar />
         
