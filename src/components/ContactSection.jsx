@@ -13,14 +13,14 @@ export default function ContactSection() {
           
           <div className="space-y-5 text-xs font-medium mb-8">
             {/* Phone Dial */}
-            <a href="tel:26077210464" className="flex items-center gap-3 text-black hover:text-[#EAB308] transition">
+            <a href="tel:+260779495904" className="flex items-center gap-3 text-black hover:text-[#EAB308] transition">
               <Phone size={16} className="text-[#EAB308]" />
-              <span className="font-semibold">260770210464</span>
+              <span className="font-semibold">+260 779 495 904</span>
             </a>
 
             {/* WhatsApp Link */}
             <a 
-              href="https://wa.me/26077210464?text=Hello%20Atlascore%2C%20I%20am%20inquiring%20about%20heavy%20machinery." 
+              href="https://wa.me/260779495904?text=Hello%20Atlascore%2C%20I%20am%20inquiring%20about%20heavy%20machinery."
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center gap-3 text-black hover:text-[#EAB308] transition"

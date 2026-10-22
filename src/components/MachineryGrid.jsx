@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // Local Asset Imports
-import excavatorImg from '../assets/images/Excavator 3.jpeg';
-import img4 from '../assets/images/4.jpeg';
-import img5 from '../assets/images/5.jpeg';
+import excavatorImg from '../assets/images/Excavator 3 (1).jpeg';
+import graderImg from '../assets/images/front-end.jpeg';
+import frontEndLoaderImg from '../assets/images/motor grader.jpeg';
+import bulldozerImg from '../assets/images/bulldozer.jpeg';
+import lowbedTruckImg from '../assets/images/lowbed-truck.jpeg';
+import tipperTruckImg from '../assets/images/tipper-truck.jpeg';
+import trucksVariedImg from '../assets/images/trucks-various.jpeg';
+import tractorImg from '../assets/images/heavy-tractor.jpeg';
 import img6 from '../assets/images/6.jpeg';
-import img7 from '../assets/images/7.jpeg';
 
 export default function MachineryGrid() {
   const [activeTab, setActiveTab] = useState('ALL');
@@ -26,7 +30,7 @@ export default function MachineryGrid() {
     { 
       id: 1,
       title: 'TLB / BACKHOE LOADER', 
-      image: img5, 
+      image: img6,
       cat: 'TLBS',
       rate: 'Daily Rate',
       desc: 'Versatile digging, trenching, and site preparation loader.'
@@ -42,7 +46,7 @@ export default function MachineryGrid() {
     { 
       id: 3,
       title: 'MOTOR GRADER', 
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800', 
+      image: graderImg,
       cat: 'GRADERS',
       rate: 'Inquire for Rates',
       desc: 'Precision road construction, leveling, and site grading.'
@@ -50,7 +54,7 @@ export default function MachineryGrid() {
     { 
       id: 4,
       title: 'FRONT-END LOADER', 
-      image: img4, 
+      image: frontEndLoaderImg,
       cat: 'LOADERS',
       rate: 'Inquire for Rates',
       desc: 'High-capacity loading for sand, gravel, and stone materials.'
@@ -58,7 +62,7 @@ export default function MachineryGrid() {
     { 
       id: 5,
       title: 'BULLDOZER / DOZER', 
-      image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&q=80&w=800', 
+      image: bulldozerImg,
       cat: 'BULLDOZERS',
       rate: 'Inquire for Rates',
       desc: 'Heavy land clearing, bush clearing, and earth pushing.'
@@ -66,7 +70,7 @@ export default function MachineryGrid() {
     { 
       id: 6,
       title: '30-TON TIPPER TRUCK', 
-      image: img6, 
+      image: tipperTruckImg,
       cat: 'TRUCKS',
       rate: 'Daily Rate',
       desc: 'Bulk haulage for aggregate, soil, and site clearance waste.'
@@ -74,7 +78,7 @@ export default function MachineryGrid() {
     { 
       id: 7,
       title: 'LOWBED TRUCK', 
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800', 
+      image: lowbedTruckImg,
       cat: 'TRANSPORT',
       rate: 'Inquire for Rates',
       desc: 'Machinery transportation and heavy plant equipment transit.'
@@ -82,15 +86,19 @@ export default function MachineryGrid() {
     { 
       id: 8,
       title: 'TRUCKS (VARIOUS)', 
-      image: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=800', 
+      image: trucksVariedImg,
       cat: 'TRUCKS',
       rate: 'Inquire for Rates',
-      desc: 'Multi-purpose haulage trucks for site logistics and materials.'
+      desc: 'Multi-purpose haulage trucks for site logistics and materials.',
+      imageCredit: {
+        text: 'Photo: Sneha G. Gupta, CC BY-SA 4.0',
+        url: 'https://commons.wikimedia.org/wiki/File:Freight_transportation_by_road_on_open_truck.jpg'
+      }
     },
     { 
       id: 9,
       title: 'HEAVY TRACTORS', 
-      image: img7, 
+      image: tractorImg,
       cat: 'TRACTORS',
       rate: 'Inquire for Rates',
       desc: 'Agricultural cultivation, site slashing, and utility towing.'
@@ -139,6 +147,16 @@ export default function MachineryGrid() {
                     alt={item.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
                   />
+                  {item.imageCredit && (
+                    <a
+                      href={item.imageCredit.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute bottom-2 right-2 bg-black/75 px-2 py-1 text-[9px] text-white"
+                    >
+                      {item.imageCredit.text}
+                    </a>
+                  )}
                   <span className="absolute top-3 left-3 bg-black/80 text-[#EAB308] text-[10px] font-bold uppercase tracking-widest px-2.5 py-1">
                     {item.rate}
                   </span>
@@ -152,7 +170,7 @@ export default function MachineryGrid() {
 
               <div className="p-6 pt-0 mt-auto">
                 <a 
-                  href={`https://wa.me/26077210464?text=Hello%20Atlascore%2C%20I%20am%20inquiring%20about%20hiring%20the%20${encodeURIComponent(item.title)}.`}
+                  href={`https://wa.me/260779495904?text=${encodeURIComponent(`Hello Atlascore, I would like to enquire about hiring the ${item.title}. Please share availability, hire rates, and booking details. Thank you.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-[#EAB308] text-black text-center py-2.5 text-xs font-bold tracking-wider uppercase hover:bg-yellow-500 transition"

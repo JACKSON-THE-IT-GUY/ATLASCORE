@@ -69,7 +69,7 @@ export default function Services() {
 
               <div className="p-6 pt-0 mt-auto">
                 <a 
-                  href={`https://wa.me/26077210464?text=Hello%20Atlascore%2C%20I%20am%20inquiring%20about%20your%20${encodeURIComponent(service.title)}%20services.`}
+                  href={`https://wa.me/260779495904?text=Hello%20Atlascore%2C%20I%20am%20inquiring%20about%20your%20${encodeURIComponent(service.title)}%20services.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-[#EAB308] text-xs font-bold uppercase tracking-wider hover:text-yellow-400 transition"
@@ -102,11 +102,11 @@ export default function Services() {
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto shrink-0">
             {/* Direct Phone Call Button */}
             <a 
-              href="tel:+26077210464" 
+              href="tel:+260779495904"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-bold uppercase tracking-wider px-6 py-3.5 border border-zinc-700 transition"
             >
               <PhoneCall size={16} className="text-[#EAB308]" />
-              <span>+260 77 210 464</span>
+              <span>+260 779 495 904</span>
             </a>
 
             {/* Request Quote Button - Linked to #contact */}
