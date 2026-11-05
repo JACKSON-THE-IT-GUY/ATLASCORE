@@ -2,14 +2,14 @@ import { useState } from 'react';
 
 // Local Asset Imports
 import excavatorImg from '../assets/images/Excavator 3 (1).jpeg';
-import graderImg from '../assets/images/front-end.jpeg';
-import frontEndLoaderImg from '../assets/images/motor grader.jpeg';
-import bulldozerImg from '../assets/images/bulldozer.jpeg';
-import lowbedTruckImg from '../assets/images/lowbed-truck.jpeg';
-import tipperTruckImg from '../assets/images/tipper-truck.jpeg';
+import graderImg from '../assets/images/motor grader.png';
+import frontEndLoaderImg from '../assets/images/front-end.jpeg';
+import bulldozerImg from '../assets/images/bulldozer.png';
+import lowbedTruckImg from '../assets/images/lowerbed.png';
+import tipperTruckImg from '../assets/images/tipper.png';
 import trucksVariedImg from '../assets/images/trucks-various.jpeg';
-import tractorImg from '../assets/images/heavy-tractor.jpeg';
-import img6 from '../assets/images/6.jpeg';
+import tractorImg from '../assets/images/heavy-tractor-field.jpg';
+import backhoeLoaderImg from '../assets/images/tbl.png';
 
 export default function MachineryGrid() {
   const [activeTab, setActiveTab] = useState('ALL');
@@ -30,7 +30,7 @@ export default function MachineryGrid() {
     { 
       id: 1,
       title: 'TLB / BACKHOE LOADER', 
-      image: img6,
+      image: backhoeLoaderImg,
       cat: 'TLBS',
       rate: 'Daily Rate',
       desc: 'Versatile digging, trenching, and site preparation loader.'
@@ -101,7 +101,11 @@ export default function MachineryGrid() {
       image: tractorImg,
       cat: 'TRACTORS',
       rate: 'Inquire for Rates',
-      desc: 'Agricultural cultivation, site slashing, and utility towing.'
+      desc: 'Agricultural cultivation, site slashing, and utility towing.',
+      imageCredit: {
+        text: 'Photo: Keith Weller / USDA, public domain',
+        url: 'https://commons.wikimedia.org/wiki/File:Farmer_and_tractor_tilling_soil.jpg'
+      }
     },
   ];
 
